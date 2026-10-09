@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>This page has moved</title>
+    <script>
+      // Old project sites that moved to their own domains. Keep the rest of the
+      // path, so an old link lands on the same page, not the home page.
+      (function () {
+        var moved = {
+          afrigov: "https://afrigov.dev",
+          "afrigov-usecases": "https://usecases.afrigov.dev",
+        };
+        var parts = location.pathname.split("/");
+        var home = moved[parts[1]];
+        if (home) location.replace(home + "/" + parts.slice(2).join("/") + location.search + location.hash);
+      })();
+    </script>
+    <style>
+      body {
+        max-width: 36rem;
+        margin: 3rem auto;
+        padding: 0 1rem;
+        font: 1.125rem/1.5 system-ui, sans-serif;
+        color: #1b1b1b;
+        background: #fff;
+      }
+      a {
+        color: #1d4f91;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This page has moved</h1>
+    <p>afrigov has its own home now.</p>
+    <ul>
+      <li><a href="https://afrigov.dev">afrigov docs: afrigov.dev</a></li>
+      <li><a href="https://usecases.afrigov.dev">afrigov use cases: usecases.afrigov.dev</a></li>
+      <li><a href="https://github.com/afrigov">The code: github.com/afrigov</a></li>
+    </ul>
+  </body>
+</html>
